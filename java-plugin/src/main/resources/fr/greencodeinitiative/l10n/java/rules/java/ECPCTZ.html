@@ -1,0 +1,49 @@
+<p>In loops, prefer comparison to zero conditions.</p>
+<h2>Noncompliant For Loop Solution</h2>
+<pre>
+    public class nonCompliantForSolution {
+        public static void main(String[] args) {
+        
+			for (int i = 0; i < 5; i++) { // Noncompliant
+				// Do Something;
+			}
+		}    
+    }
+</pre>
+<h2>Compliant For Loop Solution</h2>
+<pre>
+    public class compliantForSolution {
+        public static void main(String[] args) {
+        
+			for (int i = 5; i > 0; i--) { // Compliant
+				// Do Something;
+			}
+		}    
+    }
+</pre>
+<h2>Noncompliant While Loop Solution</h2>
+<pre>
+    public class nonCompliantForSolution {
+        public static void main(String[] args) {
+        
+			int i = 0;
+			while(i < 5) { // Noncompliant
+				// Do Something
+				i++;
+			}
+		}    
+    }
+</pre>
+<h2>Compliant While Loop Solution</h2>
+<pre>
+    public class compliantForSolution {
+        public static void main(String[] args) {
+        
+			int i = 5;
+			while(i > 0) { // Noncompliant
+				// Do Something
+				i--;
+			}
+		}    
+    }
+</pre>
